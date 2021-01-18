@@ -1,0 +1,556 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+/* GLobal styling ==================================================================== */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: montserrat, sans-serif;
+  height: 99vh;
+}
+.home {
+  background-image: radial-gradient(at top left, #12191e 0%, #000000 55%);
+}
+.max-width {
+  max-width: 100%;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* Global styling for similar items */
+.about .about-content,
+.projects .projects-content,
+.skills .skills-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 183px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .title::after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 19px;
+  color: #12191e;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+/* Menu Button ==================================================================== */
+.menu-button {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-button {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: crimson;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-button.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up-button:hover {
+  filter: brightness(90%);
+}
+
+/* Navigation Bar ====================================================================*/
+.navigation {
+  position: fixed;
+  /* top: 60px; */
+  width: 100%;
+  padding: 10px 0;
+  font-family: "Ubuntu", sans-serif;
+  /* background-color: #12191e; */
+  /* padding: 10px; */
+  /* margin: 20px 30px; */
+  /* box-sizing: border-box; */
+  transition: all 0.3s ease;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  mix-blend-mode: difference;
+  backdrop-filter: blur(10px);
+}
+.navigation .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins";
+  mix-blend-mode: difference;
+}
+.navigation .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navigation .menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+  mix-blend-mode: difference;
+}
+.navigation .menu li a:hover {
+  color: #5d7f98;
+}
+
+/* Home section ====================================================================*/
+.home {
+  display: flex;
+  background: url("images/Nhlanhla.png") top no-repeat,
+    radial-gradient(at top left, #12191e 0%, #000000 55%);
+  background-attachment: scroll;
+  height: 100vh;
+  background-size: cover;
+  color: #ffffff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+.home .home-content .text {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 5px 0;
+  left: 0px;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 469px;
+}
+.home .home-content .text h1 {
+  font-weight: bold;
+  margin: 0px;
+  color: #ffffff;
+}
+.home .home-content .text p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0px 30px;
+  color: rgba(188, 188, 188, 1);
+}
+input[type="button"] {
+  border: 1px solid #5d7f98;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #5d7f98;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  outline: none;
+  transition: transform 80ms ease-in;
+}
+input[type="button"]:active {
+  transform: scale(0.95);
+}
+input[type="button"]:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.social a {
+  text-decoration: none;
+  color: #5d7f98;
+}
+.social i {
+  padding: 13px 20px;
+  font-size: 27px;
+}
+.fa-github:hover,
+.fa-linkedin:hover {
+  color: #fff;
+}
+
+/* About section ====================================================================*/
+.about {
+  padding: 100px 0;
+  background: radial-gradient(circle at bottom, #5d7f98 5%, #f9fafb 5%);
+  display: flex;
+}
+.about .max-width {
+  max-width: 1200px;
+}
+.about .title::after {
+  content: "Software Engineer";
+  background: #f9fafb;
+  color: #5d7f98;
+}
+.about .about-content .left {
+  width: 45%;
+}
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 100px;
+  transform: scale(1.2);
+  mix-blend-mode: darken;
+}
+.about .about-content .left img:hover {
+  mix-blend-mode: normal;
+}
+.about .about-content .right {
+  width: 55%;
+}
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about .about-content .right .text span {
+  font-size: 37px;
+  font-weight: 600;
+}
+.about .about-content .right p {
+  text-align: justify;
+  color: #000;
+}
+.about .about-content .right a {
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #5d7f98;
+}
+.about .about-content .right a:hover {
+  font-size: 101%;
+  color: #12191e;
+}
+
+/* Skills section ====================================================================*/
+.skills {
+  padding: 100px 0;
+  background-image: radial-gradient(
+    at top center,
+    #5d7f98 5%,
+    #12191e 45%,
+    #000000 65%
+  );
+  color: white;
+  font-family: Ubuntu;
+  display: flex;
+}
+.skills .max-width {
+  max-width: 1500px;
+}
+.skills .title::before {
+  width: 150px;
+  background: white;
+}
+.skills .title::after {
+  content: "& competencies";
+  background: white;
+}
+.skills .skills-content .left {
+  width: 15%;
+}
+.skills .skills-content .center {
+  width: 70%;
+}
+.skills .skills-content .right {
+  width: 15%;
+}
+.skills .skills-content .center .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.skills .skills-content .center p {
+  text-align: justify;
+}
+.skills .skills-content .center p a {
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: rgb(38, 128, 225);
+}
+.skills .skills-content .center p a:hover {
+  color: #fff;
+}
+.python,
+.java {
+  font-size: 100px;
+  padding: 31%;
+}
+.skills .skills-list {
+  display: table;
+  width: 100%;
+  padding-inline-start: 0px;
+}
+.skills .skills-list li {
+  list-style: none;
+  display: inline;
+  table-layout: 100%;
+  display: table-cell;
+}
+.skills .skills-list li a {
+  text-decoration: none;
+  color: rgb(38, 128, 225);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  text-align: center;
+  margin: 0 1px;
+  filter: blur(2.5px);
+  opacity: 0.5;
+}
+.skills .skills-list li a:hover {
+  filter: blur(0px);
+  opacity: 1;
+  color: #fff;
+}
+
+/* Projects section ====================================================================*/
+.projects {
+  padding: 100px 0;
+  background: radial-gradient(circle at bottom, #12191e 5%, #f9fafb 5%);
+  color: #000;
+  font-family: Ubuntu;
+}
+.projects .max-width {
+  max-width: 1500px;
+}
+.projects .title::before {
+  background: #000;
+  width: 115px;
+}
+.projects .title::after {
+  background: #f9fafb;
+  color: #5d7f98;
+  content: "& interests";
+}
+.projects-content {
+  display: flex;
+  max-height: 250px;
+  justify-content: center;
+  align-items: center;
+  margin: 10vmin;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-direction: column;
+  background: linear-gradient(
+    to right,
+    #f9fafb -10%,
+    #000 20%,
+    #000 80%,
+    #f9fafb 110%
+  );
+}
+.projects-content > * {
+  margin: 5px;
+}
+.project {
+  min-width: 300px;
+  height: 200px;
+  padding: 20px 50px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project i {
+  font-size: 1000%;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+.box {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 90%;
+  background: #12191e;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+.box .text a {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 25px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+}
+.box p {
+  transition: all 0.9s ease;
+  transform: scale(0.1);
+  text-align: center;
+  font-size: 14px;
+  padding: 0 3px;
+  margin: 1;
+}
+.project:hover .box {
+  opacity: 0.9;
+  width: 90%;
+  transition: all 0.5s ease;
+}
+.project:hover .box p {
+  transform: scale(1);
+  transition: all 0.9s ease;
+}
+.box .text a:hover {
+  font-size: 27px;
+}
+
+/* Contact Section ==================================================================== */
+.contact {
+  padding: 100px 0;
+  display: flex;
+  background: radial-gradient(at top, #12191e 0%, #000000 75%);
+  font-family: Ubuntu;
+  color: #fff;
+}
+.contact .max-width {
+  max-width: 750px;
+}
+.contact .title::before {
+  width: 105px;
+}
+.contact .title::after {
+  background: #f9fafb;
+  color: #000;
+  content: "reach out";
+}
+.contact-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.body {
+  display: flex;
+}
+.body-content {
+  flex: 1;
+  padding: 50px;
+}
+.body-content.left {
+  display: flex;
+  flex-direction: column;
+}
+.body .title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #5d7f98;
+  font-size: 28px;
+}
+.body .title:after {
+  content: "Click on the links (Submit Button currently not working)";
+  background: transparent;
+  width: 150px;
+  color: #ddd;
+  font-size: 13px;
+  height: 20px;
+  align-items: center;
+}
+.body .title:before {
+  width: 205px;
+  left: 0px;
+  transform: translateY(-16px);
+}
+.my-cellphone,
+.my-email,
+.my-location {
+  margin-top: auto;
+  font-size: 16px;
+  color: #888;
+}
+.my-cellphone a,
+.my-email a,
+.my-location a {
+  color: #888;
+  text-decoration: none;
+}
+.my-cellphone i,
+.my-email i,
+.my-location i {
+  font-size: 20px;
+}
+.my-cellphone a:hover,
+.my-email a:hover,
+.my-location a:hover {
+  color: #fff;
+}
+.form-details {
+  margin-bottom: 15px;
+}
+.form-details.message {
+  margin-top: 40px;
+}
+.form-input {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-input::placeholder {
+  color: #666;
+}
+.form-input:focus {
+  border-bottom-color: #ddd;
+}
