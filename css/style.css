@@ -182,7 +182,8 @@ section .title::after {
   margin: 20px 0px 30px;
   color: rgba(188, 188, 188, 1);
 }
-input[type="button"] {
+input[type="button"],
+input[type="submit"] {
   border: 1px solid #5d7f98;
   border-radius: 12px;
   background-color: transparent;
@@ -195,10 +196,12 @@ input[type="button"] {
   outline: none;
   transition: transform 80ms ease-in;
 }
-input[type="button"]:active {
+input[type="button"],
+input[type="submit"]:active {
   transform: scale(0.95);
 }
-input[type="button"]:hover {
+input[type="button"],
+input[type="submit"]:hover {
   color: #fff;
   border: 1px solid #fff;
 }
