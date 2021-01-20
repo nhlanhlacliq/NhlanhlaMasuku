@@ -255,7 +255,7 @@
                     <input class="form-input" name="entry.1661174606" id="entry.1661174606" placeholder="MESSAGE">
                   </div>
                   <a>
-                    <input type="submit" value="Submit" name="Submit">
+                    <input type="submit" value="submit" name="submit">
                   </a>
                 </form>
                 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
@@ -267,13 +267,13 @@
       </section>
     </div>
   </body>
-
-  <script src="assets/js/jquery.min.js"></script>
+  <!-- jquery script from google library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript">var submitted=false;</script>
   <script type="text/javascript">
-  $('#gform').on('Submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
+  $('#form').on('submit', function(e) {
+  $('#form *').fadeOut(2000);
+  $('#form').prepend('Thank you. Form is submitted...');
   });
   </script>
 
