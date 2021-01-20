@@ -8,7 +8,7 @@
     <meta name="robots" content="index,follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/alpha_n_icon_138955.ico" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script
       src="https://kit.fontawesome.com/6dfb0427e6.js"
       crossorigin="anonymous"
@@ -47,7 +47,7 @@
                 work ethic.
               </p>
               <!-- Download Resume Button and social links -->
-              <a href="/Nhlanhla Masuku CV (1).pdf" download>
+              <a href="/cv/Nhlanhla Masuku CV (1).pdf" download>
                 <input type="button" value="Download Resume" />
               </a>
               <div class="social">
@@ -237,30 +237,44 @@
                 Edenglen, Gauteng, South Africa</a></div>
 
               </div>
+              <!-- https://docs.google.com/forms/d/e/1FAIpQLSe3qS0CXSnNhRRmx3vMc2LSFl6oCT05R8X7Ajdh7bepum64JA/viewform?usp=pp_url&entry.1764869276=Nhla&entry.1880439323=NOEmails&entry.773039884=0889008000&entry.1661174606=Hello -->
               <div class="body-content">
-                <div class="form">
+                <!-- Submit form to a google form with same fields -->
+                <!-- https://github.com/toperkin/staticFormEmails/blob/master/README.md -->
+                <form class="form" name="form" id="form" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSe3qS0CXSnNhRRmx3vMc2LSFl6oCT05R8X7Ajdh7bepum64JA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                   <div class="form-details">
-                    <input class="form-input" placeholder="NAME">
+                    <input class="form-input" name="entry.1764869276" id="entry.1764869276" placeholder="NAME">
                   </div>
                   <div class="form-details">
-                    <input class="form-input" placeholder="EMAIL">
+                    <input class="form-input" name="entry.1880439323" id="entry.1880439323" placeholder="EMAIL">
                   </div>
                   <div class="form-details">
-                    <input class="form-input" placeholder="CONTACT NO">
+                    <input class="form-input" name="entry.773039884" id="entry.773039884" placeholder="CONTACT NO">
                   </div>
                   <div class="form-details message">
-                    <input class="form-input" placeholder="MESSAGE">
+                    <input class="form-input" name="entry.1661174606" id="entry.1661174606" placeholder="MESSAGE">
                   </div>
-                </div>
+                  <a>
+                    <input type="submit" value="Submit" name="Submit">
+                  </a>
+                </form>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
               </div>
             </div>
 
-            <a>
-              <input type="button" value="Submit" />
-            </a>
           </div>
         </div>
       </section>
     </div>
   </body>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript">var submitted=false;</script>
+  <script type="text/javascript">
+  $('#gform').on('Submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+  </script>
+
 </html>
