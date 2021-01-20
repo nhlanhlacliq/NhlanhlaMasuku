@@ -182,8 +182,7 @@ section .title::after {
   margin: 20px 0px 30px;
   color: rgba(188, 188, 188, 1);
 }
-input[type="button"],
-input[type="submit"] {
+input[type="button"] {
   border: 1px solid #5d7f98;
   border-radius: 12px;
   background-color: transparent;
@@ -196,12 +195,10 @@ input[type="submit"] {
   outline: none;
   transition: transform 80ms ease-in;
 }
-input[type="button"],
-input[type="submit"]:active {
+input[type="button"]:active {
   transform: scale(0.95);
 }
-input[type="button"],
-input[type="submit"]:hover {
+input[type="button"]:hover {
   color: #fff;
   border: 1px solid #fff;
 }
@@ -559,4 +556,27 @@ input[type="submit"]:hover {
 }
 .form-input:focus {
   border-bottom-color: #ddd;
+}
+.form a {
+  padding: 0 25%;
+}
+input[type="submit"] {
+  border: 1px solid #5d7f98;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #5d7f98;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  outline: none;
+  transition: transform 80ms ease-in;
+}
+input[type="submit"]:active {
+  transform: scale(0.95);
+}
+input[type="submit"]:hover {
+  color: #fff;
+  border: 1px solid #fff;
 }
