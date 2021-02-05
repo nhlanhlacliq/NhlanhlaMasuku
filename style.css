@@ -287,7 +287,7 @@ input[type="button"]:hover {
   max-width: 1500px;
 }
 .skills .title::before {
-  width: 150px;
+  width: 140px;
   background: white;
 }
 .skills .title::after {
@@ -310,7 +310,7 @@ input[type="button"]:hover {
 }
 .skills .skills-content .center p {
   text-align: justify;
-  font-family: montserrat, sans-serif;
+  /* font-family: montserrat, sans-serif; */
   font-size: 18px;
 }
 .skills .skills-content .center p a {
@@ -497,7 +497,7 @@ input[type="button"]:hover {
   font-size: 28px;
 }
 .body .title:after {
-  content: "Click on the links (Submit Button currently not working)";
+  content: "Click on the links";
   background: transparent;
   width: 150px;
   color: #ddd;
