@@ -1,2 +1,2 @@
 # Resume
-Remaking it using bootstrap studio
+TODO: Remake it using Next/Nuxt/Gastby
